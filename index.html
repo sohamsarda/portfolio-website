@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Sarda - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Soham Sarda</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm Soham Sarda</h1>
+        <p>Computer Science Graduate | Software Developer</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn primary-btn">Get in Touch</a>
+            <a href="soham resume1.pdf" class="btn secondary-btn" download>Download Resume</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="hero-image.jpeg" alt="Profile Photo" class="hero-photo" />
+    </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I am a recent Computer Science graduate with a passion for building innovative solutions. My journey in technology started during my B.Tech in Computer Science, where I gained a strong foundation in software development and problem-solving.</p>
+            <p>I'm especially interested in learning and working with newer technologies. My goal is to keep growing my skills and contribute to meaningful work that makes a positive difference in people's lives.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-grid">
+            
+            <!-- Project 1: Amazon Clone -->
+            <div class="project-card">
+                <h3>Amazon Clone</h3>
+                <p>A clone of the Amazon US website.</p>
+                <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sohamsarda/Amazon-Clone-" target="_blank">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="https://sohamsarda.github.io/Amazon-Clone-/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2: Weather Dashboard -->
+            <div class="project-card">
+                <h3>Weather Dashboard</h3>
+                <p>A weather application that provides real-time weather data and forecasts.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>OpenWeather API</span>
+                    <span>HTML5</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sohamsarda/weather-report" target="_blank">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                    <a href="https://sohamsarda.github.io/weather-report/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Technologies</h3>
+                <div class="skill-items">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Andoid</span>
+                    <span>Mongo Db</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Others</h3>
+                <div class="skill-items">
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>AWS</span>
+                    <span>VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+
+        <!-- Cisco Cybersecurity -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="cert-content">
+                <h3>Introduction to Cybersecurity</h3>
+                <p class="cert-issuer">Cisco</p>
+                <p class="cert-date">Issued 2023</p>
+            </div>
+        </div>
+
+        <!-- NPTEL Python -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="cert-content">
+                <h3>Data Analysis with Python</h3>
+                <p class="cert-issuer">NPTEL</p>
+                <p class="cert-date">Issued 2024</p>
+            </div>
+        </div>
+
+        <!-- Udemy Java -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="cert-content">
+                <h3>Java Programming Masterclass</h3>
+                <p class="cert-issuer">Udemy</p>
+                <p class="cert-date">Issued 2024</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form" action="https://formsubmit.co/sohamsardajam@gmail.com" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://in.linkedin.com/in/soham-sarda-a54053243" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/sohamsarda/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Soham Sarda. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
