@@ -88,6 +88,17 @@ function initScrollAnimations() {
         observer.observe(section);
     });
 }
+//Change the title of the web page
+const originalTitle = document.title;
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        document.title = "👋 Come back soon!";
+      } else {
+        document.title = originalTitle;
+      }
+    });
+
 
 // // Form Submission
 // function initContactForm() {
