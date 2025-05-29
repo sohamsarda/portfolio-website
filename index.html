@@ -6,142 +6,235 @@
     <title>Soham Sarda - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Soham Sarda</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <button id="darkModeToggle" class="dark-mode-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
+<!-- Header -->
+<header class="site-header">
+  <nav class="navbar">
+    <div class="logo">Soham Sarda</div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-container">
     <div class="hero-content">
-        <h1>Hi, I'm Soham Sarda</h1>
-        <p>Computer Science Graduate | Software Developer</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn primary-btn">Get in Touch</a>
-            <a href="soham resume1.pdf" class="btn secondary-btn" download>Download Resume</a>
-        </div>
+      <h1>Hi, I'm Soham Sarda</h1>
+      <p>Computer Science Graduate | Software Developer</p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+       <a href="soham resume1.pdf" class="btn secondary-btn" download title="Download Resume PDF">Download Resume</a>
+
+
+        <!-- GitHub -->
+        <a href="https://github.com/sohamsarda" class="btn icon-btn" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://in.linkedin.com/in/soham-sarda-a54053243" class="btn icon-btn" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
     </div>
+
     <div class="hero-image">
-        <img src="hero-image.jpeg" alt="Profile Photo" class="hero-photo" />
+      <img src="hero-image.jpeg" alt="Soham Sarda" class="hero-photo" loading="lazy" />
+
     </div>
+  </div>
+</section>
 
-    </section>
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <p>
+      I'm a Computer Science graduate with a strong passion for software development and innovative technology. My academic journey through B.Tech in Computer Science at Parul University laid a solid foundation in programming, algorithms, and system design.
+    </p>
+    <p>
+      I enjoy building meaningful solutions that solve real-world problems. Eager to keep learning, I'm especially drawn to modern web technologies, collaborative development, and continuous improvement through hands-on projects.
+    </p>
+  </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>I am a recent Computer Science graduate with a passion for building innovative solutions. My journey in technology started during my B.Tech in Computer Science, where I gained a strong foundation in software development and problem-solving.</p>
-            <p>I'm especially interested in learning and working with newer technologies. My goal is to keep growing my skills and contribute to meaningful work that makes a positive difference in people's lives.</p>
+
+<!-- Education Section -->
+<section id="education" class="education">
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <div class="education-grid">
+
+        <!-- B.Tech -->
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>B.Tech in Computer Science</h3>
+                <span class="duration">2021 – 2025</span>
+            </div>
+            <p class="institution">Parul University</p>
+            <p class="details">Graduated with a strong foundation in software development, algorithms, and data structures. Participated in hackathons and research projects.</p>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-
-        <div class="project-grid">
-            
-            <!-- Project 1: Amazon Clone -->
-            <div class="project-card">
-                <h3>Amazon Clone</h3>
-                <p>A clone of the Amazon US website.</p>
-                <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/sohamsarda/Amazon-Clone-" target="_blank">
-                        <i class="fab fa-github"></i> Code
-                    </a>
-                    <a href="https://sohamsarda.github.io/Amazon-Clone-/" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
-                </div>
+        <!-- HSC -->
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>HSC (Science Stream)</h3>
+                <span class="duration">2020 – 2021</span>
             </div>
-
-            <!-- Project 2: Weather Dashboard -->
-            <div class="project-card">
-                <h3>Weather Dashboard</h3>
-                <p>A weather application that provides real-time weather data and forecasts.</p>
-                <div class="tech-stack">
-                    <span>JavaScript</span>
-                    <span>OpenWeather API</span>
-                    <span>HTML5</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/sohamsarda/weather-report" target="_blank">
-                        <i class="fab fa-github"></i> Code
-                    </a>
-                    <a href="https://sohamsarda.github.io/weather-report/" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
-                </div>
-            </div>
+            <p class="institution">Shree Satya Sai Vidyalaya</p>
+           <p class="details">Completed Higher Secondary Certificate (HSC) with a focus on Science stream.</p>
 
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-items">
-                    <span>Java</span>
-                    <span>Python</span>
-                    <span>JavaScript</span>
-                    <span>SQL</span>
-                </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
+    <div class="project-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>Amazon Clone</h3>
+            <p class="project-desc">A responsive clone of Amazon's US website with basic functionality and styling.</p>
+            <div class="tech-stack">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
             </div>
-            <div class="skill-category">
-                <h3>Technologies</h3>
-                <div class="skill-items">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>React</span>
-                    <span>Node.js</span>
-                    <span>Andoid</span>
-                    <span>Mongo Db</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Others</h3>
-                <div class="skill-items">
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>AWS</span>
-                    <span>VS Code</span>
-                </div>
+            <div class="project-links">
+                <a href="https://github.com/sohamsarda/Amazon-Clone-" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://sohamsarda.github.io/Amazon-Clone-/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
             </div>
         </div>
-    </section>
 
-  <!-- Certifications Section -->
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>Weather Dashboard</h3>
+            <p class="project-desc">Provides real-time weather info using the OpenWeather API with city search.</p>
+            <div class="tech-stack">
+                <span>JavaScript</span>
+                <span>OpenWeather API</span>
+                <span>HTML5</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/sohamsarda/weather-report" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://sohamsarda.github.io/weather-report/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <h3>Crowd Funding Website</h3>
+            <p class="project-desc">A platform interface to request funding for ideas using a simple form UI.</p>
+            <div class="tech-stack">
+                <span>JavaScript</span>
+                <span>Tailwind CSS</span>
+                <span>HTML</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/sohamsarda/crowdfundingwebsite" target="_blank">
+                    <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/sohamsarda/crowdfundingwebsite" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Skills Section -->
+<section id="skills" class="skills">
+    <h2><i class="fas fa-tools"></i> Skills</h2>
+    <div class="skills-grid">
+
+        <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Programming Languages</h3>
+            <div class="skill-items">
+                <span>Java</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>SQL</span>
+                <span>Android</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-laptop"></i> Technologies</h3>
+            <div class="skill-items">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3><i class="fas fa-wrench"></i> Tools & Platforms</h3>
+            <div class="skill-items">
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>AWS</span>
+                <span>VS Code</span>
+                <span>Android Studio</span>
+                <span>Firebase</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Certifications Section -->
 <section id="certifications" class="certifications">
-    <h2>Certifications</h2>
+    <h2><i class="fas fa-certificate"></i> Certifications</h2>
     <div class="cert-grid">
+
+          
+        <!-- Microsoft Natural Programming -->
+<div class="cert-card">
+    <div class="cert-icon">
+        <i class="fas fa-robot"></i>
+    </div>
+    <div class="cert-content">
+        <h3>Build a Natural Programming Model</h3>
+        <p class="cert-issuer">Microsoft</p>
+        <p class="cert-date">Issued 2025</p>
+    </div>
+</div>
+
+
 
         <!-- Cisco Cybersecurity -->
         <div class="cert-card">
@@ -179,40 +272,87 @@
             </div>
         </div>
 
+        <!-- Udemy Java -->
+        <div class="cert-card">
+            <div class="cert-icon">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="cert-content">
+                <h3>Full Stack Web Programming Masterclass</h3>
+                <p class="cert-issuer">Udemy</p>
+                <p class="cert-date">Issued 2024</p>
+            </div>
+        </div>
+
     </div>
 </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <div class="contact-container">
-            <form id="contact-form" class="contact-form" action="https://formsubmit.co/sohamsardajam@gmail.com" method="POST">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                </div>
-                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-                <button type="submit" class="btn primary-btn">Send Message</button>
-            </form>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+    <form
+      id="contact-form"
+      class="contact-form"
+      action="https://formsubmit.co/sohamsardajam@gmail.com"
+      method="POST"
+    >
+      <div class="form-group">
+        <input type="text" name="name" required placeholder="Your Name" />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" required placeholder="Your Email" />
+      </div>
+      <div class="form-group">
+        <textarea name="message" required placeholder="Your Message"></textarea>
+      </div>
+      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html" />
+      <button type="submit" class="btn primary-btn">Send Message</button>
+    </form>
 
-            <div class="social-links">
-                <a href="https://in.linkedin.com/in/soham-sarda-a54053243" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/sohamsarda/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-    </section>
+    <!-- <div class="social-links">
+      <a href="https://in.linkedin.com/in/soham-sarda-a54053243" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/sohamsarda/" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div> -->
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Soham Sarda. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Soham Sarda. All rights reserved.</p>
+</footer>
+
 
     <script src="script.js"></script>
+    <script>
+      // Dark mode functionality
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const body = document.body;
+      const icon = darkModeToggle.querySelector('i');
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+      }
+
+      darkModeToggle.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'dark') {
+          body.removeAttribute('data-theme');
+          icon.classList.replace('fa-sun', 'fa-moon');
+          localStorage.setItem('theme', 'light');
+        } else {
+          body.setAttribute('data-theme', 'dark');
+          icon.classList.replace('fa-moon', 'fa-sun');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    </script>
 </body>
 </html> 
