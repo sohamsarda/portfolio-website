@@ -14,18 +14,25 @@ function initDarkMode() {
 
     darkModeToggle.addEventListener('click', () => {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        darkModeToggle.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        localStorage.setItem('darkMode', !isDark);
+        if (isDark) {
+            document.documentElement.setAttribute('data-theme', 'light');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', 'false');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('darkMode', 'true');
+        }
     });
 }
 
-// Mobile Menu
+// Mobile Menu Initialization
 function initMobileMenu() {
+    // Create mobile menu container
     const mobileMenu = document.createElement('div');
     mobileMenu.className = 'mobile-menu';
     mobileMenu.innerHTML = `
-        <button class="close-menu">
+        <button class="close-menu" aria-label="Close menu">
             <i class="fas fa-times"></i>
         </button>
         ${Array.from(navLinks).map(link => `
@@ -34,14 +41,17 @@ function initMobileMenu() {
     `;
     document.body.appendChild(mobileMenu);
 
+    // Open mobile menu on button click
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.add('active');
     });
 
+    // Close mobile menu on close button click
     mobileMenu.querySelector('.close-menu').addEventListener('click', () => {
         mobileMenu.classList.remove('active');
     });
 
+    // Close mobile menu on link click (for better UX)
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
@@ -49,13 +59,15 @@ function initMobileMenu() {
     });
 }
 
-// Smooth Scrolling
+// Smooth Scrolling for nav links
 function initSmoothScroll() {
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', e => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
+            if (!targetSection) return;
+
             const navHeight = document.querySelector('.navbar').offsetHeight;
             const targetPosition = targetSection.offsetTop - navHeight;
 
@@ -67,7 +79,17 @@ function initSmoothScroll() {
     });
 }
 
-// Scroll Animations
+// Dynamic Page Title on Visibility Change
+const originalTitle = document.title;
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        document.title = '👋 Come back soon!';
+    } else {
+        document.title = originalTitle;
+    }
+});
+
+// Scroll Animations (Fade In Sections)
 function initScrollAnimations() {
     const observerOptions = {
         root: null,
@@ -88,50 +110,40 @@ function initScrollAnimations() {
         observer.observe(section);
     });
 }
-//Change the title of the web page
-const originalTitle = document.title;
 
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) {
-        document.title = "👋 Come back soon!";
-      } else {
-        document.title = originalTitle;
-      }
+// Uncomment and configure this to enable EmailJS form submission
+/*
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        try {
+            emailjs.init("YOUR_USER_ID");
+            await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData);
+
+            alert('Message sent successfully!');
+            form.reset();
+        } catch (error) {
+            console.error('Error sending message:', error);
+            alert('Failed to send message. Please try again later.');
+        }
     });
+}
+*/
 
-
-// // Form Submission
-// function initContactForm() {
-//     const form = document.getElementById('contact-form');
-    
-//     form.addEventListener('submit', async (e) => {
-//         e.preventDefault();
-        
-//         const formData = {
-//             name: form.name.value,
-//             email: form.email.value,
-//             message: form.message.value
-//         };
-
-//         try {
-//             // Replace with your EmailJS configuration
-//             emailjs.init("YOUR_USER_ID");
-//             await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData);
-            
-//             alert('Message sent successfully!');
-//             form.reset();
-//         } catch (error) {
-//             console.error('Error sending message:', error);
-//             alert('Failed to send message. Please try again later.');
-//         }
-//     });
-// }
-
-// Initialize all functionality
+// Initialize all functionality after DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     initDarkMode();
     initMobileMenu();
     initSmoothScroll();
     initScrollAnimations();
-    //initContactForm();
-}); 
+    // initContactForm(); // Uncomment to activate form handling
+});
