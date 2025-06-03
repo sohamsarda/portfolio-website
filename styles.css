@@ -1,4 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--cursor-dot-color, #000);
+}
+
+.cursor-outline {
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--cursor-ring-color, rgba(0, 0, 0, 0.3));
+  transition: background-color 0.25s, border-color 0.25s, transform 0.2s ease;
+}
+
+/* Light/dark mode theme support */
+[data-theme='dark'] {
+  --cursor-dot-color: #fff;
+  --cursor-ring-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme='light'] {
+  --cursor-dot-color: #000;
+  --cursor-ring-color: rgba(0, 0, 0, 0.3);
+}
+
 
 /* Variables */
 :root {
