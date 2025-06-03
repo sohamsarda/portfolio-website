@@ -7,8 +7,9 @@ A clean, responsive, and modern personal portfolio website built with HTML, CSS,
 - 🎨 Clean and modern design
 - 🌓 Dark mode support
 - 📱 Fully responsive layout
-- ⚡ Smooth scrolling and animations
+- ⚡ Smooth scrolling and animations with Cursor Animation
 - 🚀 Fast loading and optimized
+- 
 
 ## Setup Instructions
 
