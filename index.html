@@ -405,9 +405,9 @@
       });
     </script>
     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <title>Company Chatbot</title>
   <style>
@@ -441,6 +441,8 @@
       bottom: 90px;
       right: 20px;
       width: 350px;
+      max-height: 80vh;
+      overflow-y: auto;
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
@@ -476,13 +478,6 @@
       background-color: #0056b3;
     }
 
-    #response {
-      font-weight: bold;
-      margin-top: 10px;
-      color: green;
-    }
-
-    /* Close button */
     .close-btn {
       position: absolute;
       top: 10px;
@@ -490,6 +485,12 @@
       font-size: 18px;
       cursor: pointer;
       color: #888;
+    }
+
+    #chat-response {
+      display: none;
+      max-height: 400px;
+      overflow-y: auto;
     }
   </style>
 </head>
@@ -501,64 +502,97 @@
   <!-- Chat Popup -->
   <div class="chat-popup" id="chat-popup">
     <span class="close-btn" onclick="toggleChat()">×</span>
-    <h3>Contact Support</h3>
-    <input type="text" id="name" placeholder="Your Name" required />
-    <input type="email" id="email" placeholder="Your Email" required />
-    <input type="tel" id="mobile" placeholder="Mobile Number" required />
-    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-    <button onclick="sendQuery()">Send Message</button>
-    <p id="response"></p>
+
+    <!-- Form Section -->
+    <div id="chat-form">
+      <h3>Contact Support</h3>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="mobile" placeholder="Mobile Number" required />
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button onclick="sendQuery()">Send Message</button>
+    </div>
+
+    <!-- Success Message Section -->
+    <div id="chat-response"></div>
   </div>
 
-   <script>
-  // Toggle chat popup
-  function toggleChat() {
-    const popup = document.getElementById('chat-popup');
-    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-  }
-
-  // Attach toggle to button
-  document.getElementById('chat-toggle').addEventListener('click', toggleChat);
-
-  // Send form data
-  function sendQuery() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mobile = document.getElementById('mobile').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !mobile || !message) {
-      document.getElementById('response').innerText = '⚠️ Please fill in all fields.';
-      return;
+  <script>
+    function toggleChat() {
+      const popup = document.getElementById('chat-popup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
     }
 
-    fetch('https://chatbotapi-4wav.onrender.com/api/query', 
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, mobile, message })
-    })
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('response').innerText = data.message;
+    document.getElementById('chat-toggle').addEventListener('click', toggleChat);
 
-      // Optional: auto-close popup after 3 seconds
-      setTimeout(() => {
-        toggleChat();
-        document.getElementById('response').innerText = '';
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('mobile').value = '';
-        document.getElementById('message').value = '';
-      }, 3000);
-    })
-    .catch(err => {
-      console.error('Fetch error:', err);
-      document.getElementById('response').innerText = '❌ Failed to send message.';
-    });
-  }
-</script> 
+    function sendQuery() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const message = document.getElementById('message').value.trim();
 
+      const responseEl = document.getElementById('chat-response');
+      const sendBtn = document.querySelector('#chat-form button');
+
+      if (!name || !email || !mobile || !message) {
+        alert("⚠️ Please fill in all fields.");
+        return;
+      }
+
+      sendBtn.disabled = true;
+
+      fetch('https://chatbotapi-4wav.onrender.com/api/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, mobile, message })
+      })
+      .then(res => res.json())
+      .then(data => {
+        // Hide form and show thank-you message
+        document.getElementById('chat-form').style.display = 'none';
+        responseEl.style.display = 'block';
+
+        const replyHTML = `
+          <div style="font-family: Arial, sans-serif; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
+            <div style="background-color: #007bff; padding: 15px; color: white; text-align: center;">
+              <h3>Thank You for Reaching Out!</h3>
+            </div>
+            <div style="padding: 15px; color: #333;">
+              <p>Hi <strong>${name}</strong>,</p>
+              <p>${data.autoReply}</p>
+              <h4 style="margin-top: 20px;">📩 Message Summary:</h4>
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 6px; font-weight: bold;">Name:</td><td>${name}</td></tr>
+                <tr><td style="padding: 6px; font-weight: bold;">Email:</td><td>${email}</td></tr>
+                <tr><td style="padding: 6px; font-weight: bold;">Mobile:</td><td>${mobile}</td></tr>
+                <tr><td style="padding: 6px; font-weight: bold;">Message:</td><td>${message}</td></tr>
+              </table>
+              <p style="margin-top: 20px;">We’ll get back to you shortly.</p>
+              <p>– Customer Support Team</p>
+              <button onclick="resetForm()" style="margin-top: 15px; padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 5px;">Send Another Message</button>
+            </div>
+          </div>
+        `;
+
+        responseEl.innerHTML = replyHTML;
+        sendBtn.disabled = false;
+      })
+      .catch(err => {
+        console.error('Fetch error:', err);
+        alert("❌ Failed to send message. Please try again.");
+        sendBtn.disabled = false;
+      });
+    }
+
+    function resetForm() {
+      document.getElementById('chat-form').style.display = 'block';
+      document.getElementById('chat-response').style.display = 'none';
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('mobile').value = '';
+      document.getElementById('message').value = '';
+    }
+  </script>
 
 </body>
 </html>
