@@ -404,7 +404,6 @@
         }
       });
     </script>
-    <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -455,12 +454,18 @@
       margin-top: 0;
     }
 
+    .chat-popup label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
     .chat-popup input,
     .chat-popup textarea,
     .chat-popup button {
       width: 100%;
       padding: 10px;
-      margin: 8px 0;
+      margin: 6px 0;
       border-radius: 5px;
       border: 1px solid #ccc;
       font-size: 14px;
@@ -504,14 +509,23 @@
     <span class="close-btn" onclick="toggleChat()">×</span>
 
     <!-- Form Section -->
-    <div id="chat-form">
+    <form id="chat-form" onsubmit="event.preventDefault(); sendQuery();">
       <h3>Contact Support</h3>
+
+      <label for="name">Name</label>
       <input type="text" id="name" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
       <input type="email" id="email" placeholder="Your Email" required />
+
+      <label for="mobile">Mobile</label>
       <input type="tel" id="mobile" placeholder="Mobile Number" required />
+
+      <label for="message">Message</label>
       <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-      <button onclick="sendQuery()">Send Message</button>
-    </div>
+
+      <button type="submit">Send Message</button>
+    </form>
 
     <!-- Success Message Section -->
     <div id="chat-response"></div>
@@ -532,7 +546,8 @@
       const message = document.getElementById('message').value.trim();
 
       const responseEl = document.getElementById('chat-response');
-      const sendBtn = document.querySelector('#chat-form button');
+      const formEl = document.getElementById('chat-form');
+      const sendBtn = formEl.querySelector('button');
 
       if (!name || !email || !mobile || !message) {
         alert("⚠️ Please fill in all fields.");
@@ -540,6 +555,7 @@
       }
 
       sendBtn.disabled = true;
+      sendBtn.textContent = "Sending...";
 
       fetch('https://chatbotapi-4wav.onrender.com/api/query', {
         method: 'POST',
@@ -548,8 +564,7 @@
       })
       .then(res => res.json())
       .then(data => {
-        // Hide form and show thank-you message
-        document.getElementById('chat-form').style.display = 'none';
+        formEl.style.display = 'none';
         responseEl.style.display = 'block';
 
         const replyHTML = `
@@ -575,22 +590,24 @@
         `;
 
         responseEl.innerHTML = replyHTML;
-        sendBtn.disabled = false;
+
+        // Optional: Auto-close after 6 seconds
+        // setTimeout(() => toggleChat(), 6000);
       })
       .catch(err => {
         console.error('Fetch error:', err);
         alert("❌ Failed to send message. Please try again.");
+      })
+      .finally(() => {
         sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
       });
     }
 
     function resetForm() {
+      document.getElementById('chat-form').reset();
       document.getElementById('chat-form').style.display = 'block';
       document.getElementById('chat-response').style.display = 'none';
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('mobile').value = '';
-      document.getElementById('message').value = '';
     }
   </script>
 
