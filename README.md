@@ -48,14 +48,6 @@ A modern, responsive, and professional portfolio website to showcase projects, s
    - Replace images as needed.
    - Edit styles in `styles.css` for further customization.
 
-## 📝 Customization
-
-- **Add/Remove Projects:**  
-  Edit the Projects section in `index.html` and follow the card structure.
-- **Change Skills:**  
-  Update the Skills section for your technical and soft skills.
-- **Contact Form:**  
-  The contact form uses [FormSubmit](https://formsubmit.co/) for email delivery. You can switch to EmailJS or another service if you prefer.
 
 ## 📦 Dependencies
 
