@@ -2,544 +2,750 @@
 <html lang="en">
 
 <head>
+  
 
-  <!-- Basic Setup -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soham Sarda - Portfolio</title>
+    <!-- Basic Setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soham Sarda - Portfolio</title>
+  
+    <!-- ✅ SEO Meta Tags -->
+    <meta name="description"
+      content="Portfolio of Soham Sarda, a Computer Science graduate and software developer. Explore my projects, skills, certifications, and contact details.">
+    <meta name="keywords"
+      content="Soham Sarda, Software Developer, Portfolio, Java, JavaScript, React, Node.js, Computer Science">
+    <meta name="author" content="Soham Sarda" />
+  
+    <!-- Open Graph (For social media previews) -->
+    <meta property="og:title" content="Soham Sarda - Portfolio">
+    <meta property="og:description"
+      content="Explore projects, skills, and certifications by Soham Sarda, a passionate software developer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sohamsarda.github.io/portfolio-website/" />
 
-  <!-- ✅ SEO Meta Tags -->
-  <meta name="description"
-    content="Portfolio of Soham Sarda, a Computer Science graduate and software developer. Explore my projects, skills, certifications, and contact details.">
-  <meta name="keywords"
-    content="Soham Sarda, Software Developer, Portfolio, Java, JavaScript, React, Node.js, Computer Science">
-  <meta name="author" content="Soham Sarda" />
+  <!--
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon"> -->
 
-  <!-- Open Graph (For social media previews) -->
-  <meta property="og:title" content="Soham Sarda - Portfolio">
-  <meta property="og:description"
-    content="Explore projects, skills, and certifications by Soham Sarda, a passionate software developer.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sohamsarda.github.io/portfolio-website/" />
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Styles and Icons -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T4BZWC5F');</script>
-<!-- End Google Tag Manager -->
-
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4BZWC5F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-
-
-  <!-- Header -->
-  <header class="site-header">
-    <nav class="navbar">
-      <div class="logo">Soham Sarda</div>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-avatar">
+        <img src="./assets/images/My Avatar.png" alt="Soham Sarda" class="loading-avatar-img">
+        <div class="loading-avatar-ring"></div>
       </div>
-
-      <div class="nav-actions">
-        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-content">
-        <h1>Hi, I'm Soham Sarda</h1>
-        <p>Computer Science Graduate | Software Developer</p>
-
-        <div class="hero-buttons">
-          <a href="#contact" class="btn primary-btn">Get in Touch</a>
-          <a href="Soham_resume.pdf" class="btn secondary-btn" download title="Download Resume PDF">Download Resume</a>
-
-
-          <!-- GitHub -->
-          <a href="https://github.com/sohamsarda" class="btn icon-btn" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <!-- LinkedIn -->
-          <a href="https://in.linkedin.com/in/soham-sarda-a54053243" class="btn icon-btn" target="_blank"
-            aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-
-           <a href="https://medium.com/@sohamsarda" class="btn icon-btn" target="_blank"
-            aria-label="Medium">
-            <i class="fab fa-medium"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <img src="hero-image1.png" alt="Soham Sarda" class="hero-photo" loading="lazy" />
-
+      <h1 class="loading-name">Soham Sarda</h1>
+      <p class="loading-title">Software Developer</p>
+      <div class="loading-dots">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>
-        I'm a Computer Science graduate with a strong passion for software development and innovative technology. My
-        academic journey through B.Tech in Computer Science at Parul University laid a solid foundation in programming,
-        algorithms, and system design.
-      </p>
-      <p>
-        I enjoy building meaningful solutions that solve real-world problems. Eager to keep learning, I'm especially
-        drawn to modern web technologies, collaborative development, and continuous improvement through hands-on
-        projects.
-      </p>
-    </div>
-  </section>
+  <!-- Main Content (initially hidden) -->
+  <div id="mainContent" class="main-content-wrapper" style="display: none;">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
 
-  <!-- Education Section -->
-  <section id="education" class="education">
-    <div class="section-container">
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <div class="education-grid">
 
-        <!-- B.Tech -->
-        <div class="education-card card">
-          <div class="edu-header">
-            <h3>B.Tech in Computer Science</h3>
-            <span class="duration">2021 – 2025</span>
+    <!--
+      - #MAIN
+    -->
+
+    <main>
+
+      <!--
+        - #SIDEBAR
+      -->
+
+      <aside class="sidebar" data-sidebar>
+
+        <div class="sidebar-info">
+
+          <figure class="avatar-box">
+            <img src="./assets/images/My Avatar.png" alt="Soham Sarda avatar" width="80">
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Soham Sarda">Soham Sarda</h1>
+
+            <p class="title">Computer Science Graduate
+              <br> Software Developer </br>
+            </p>
+           
           </div>
-          <p class="institution">Parul University</p>
-          <p class="details"> Graduated with a strong foundation in software development, algorithms, and data structures.
-          </p>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+
         </div>
 
-        <!-- HSC -->
-        <div class="education-card card">
-          <div class="edu-header">
-            <h3>HSC (Science Stream)</h3>
-            <span class="duration">2020 – 2021</span>
-          </div>
-          <p class="institution">Shree Satya Sai Vidyalaya</p>
-          <p class="details">Completed Higher Secondary Certificate (HSC) with a focus on Science stream.</p>
+        <div class="sidebar-info_more">
+
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+
+            <li class="contact-item">
+
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:sohamsardajam@gmail.com" class="contact-link">sohamsardajam@gmail.com</a>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">March 18,2004</time>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Jamnagar,Gujarat,India</address>
+              </div>
+
+            </li>
+
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+
+            <li class="social-item">
+              <a href="https://github.com/sohamsarda" class="social-link" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/soham-sarda-a54053243/" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="https://medium.com/@sohamsarda" class="social-link">
+                <ion-icon name="logo-medium"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="Soham_resume.pdf" class="social-link" download>
+                <ion-icon name="download"></ion-icon>
+              </a>
+            </li>
+            
+           
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
         </div>
 
-        <!-- SSC -->
-        <!--     <div class="education-card">
-            <div class="edu-header">
-              <h3> SSC(10th Std)</h3>
-              <span class="duration">2019 - 2020</span>
+      </aside>
+
+
+
+
+
+      <!--
+        - #main-content
+      -->
+
+      <div class="main-content">
+
+        <!--
+          - #NAVBAR
+        -->
+
+        <nav class="navbar">
+
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <button class="navbar-link  active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Highlights</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Skills</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+
+          </ul>
+
+        </nav>
+
+
+
+
+
+        <!--
+          - #ABOUT
+        -->
+
+        <article class="about  active" data-page="about">
+
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              Hi! I'm Soham Sarda, a Computer Science graduate passionate about software development and technology. I thrive on solving real-world problems through code and enjoy working with modern web technologies like React, Node.js, and MongoDB.
+            </p>
+            <ul style="margin: 16px 0 16px 20px; color: #fff; font-size: 1.05rem;">
+              <li>  Full Stack Web Development (React, Node.js, MongoDB)</li>
+              <li> Problem Solving & Analytical Thinking</li>
+              <li> Team Collaboration & Communication</li>
+            </ul>
+            <p>
+              I'm looking to join a forward-thinking team where I can contribute, grow, and make a difference.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring new tech trends, watching movies , or playing chess.
+            </p>
+             <!-- <p>
+              <strong>Notable Project:</strong> Weather Dashboard app that delivers real-time weather updates using the OpenWeather API.
+            </p>  -->
+            <!-- Resume and Social Buttons Row -->
+            <div class="profile-btn-row">
+              <a href="Soham_resume.pdf" download class="profile-btn resume-download-btn">Resume</a>
+              <a href="https://github.com/sohamsarda" target="_blank" class="profile-btn icon-btn github-btn" aria-label="GitHub">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <a href="https://www.linkedin.com/in/soham-sarda-a54053243/" target="_blank" class="profile-btn icon-btn linkedin-btn" aria-label="LinkedIn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
             </div>
-            <p class="institution">Shree Satya Sai Vidyalaya</p>
-            <p class=" details">Completed 10th with Gujarat State Board </p>
-           </div> -->
+          </section>
+
+          
+
+          
+
+
+          <!--
+            - testimonials modal
+          -->
+
+          <div class="modal-container" data-modal-container>
+
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="#" width="80" data-modal-img>
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              </div>
+
+              <!-- <div class="modal-content">
+
+                <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div> -->
+
+            </section>
+
+          </div>
+
+
+        
+
+        </article>
+        <!--
+          - #RESUME
+        -->
+
+        <article class="resume" data-page="resume">
+
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">B.Tech in Computer Science, Parul University</h4>
+                <span>2021 – 2025</span>
+                <p class="timeline-text">
+                  Graduated with a strong foundation in software development, algorithms, and data structures.
+                </p>
+                <p class="timeline-text">
+                  CGPA: 7.37/10
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">HSC (Science Stream), Shree Satya Sai Vidyalaya</h4>
+                <span>2021</span>
+                <p class="timeline-text">
+                  Completed Higher Secondary Certificate (HSC) with a focus on Science stream.
+                </p>
+                <p class="timeline-text">
+                  Percentage: 81%
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">SSC, Shree Satya Sai Vidyalaya</h4>
+                <span>2019</span>
+                <p class="timeline-text">
+                  Completed 10th with Gujarat State Board.
+                </p>
+                <p class="timeline-text">
+                  Percentage: 86%
+                </p>
+              </li>
+
+            </ol>
+
+          </section>
+
+          <section class="timeline">
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Alpha Automation Pvt. Ltd.</h4>
+                <span>Jan 2025 — Present</span>
+                <p class="timeline-text">
+                  • Developed web applications using JavaScript and Node.js, ensuring responsive and efficient performance.<br>
+                  • Collaborated with cross-functional teams to design, develop, and test new features for the application.<br>
+                  • Identified and fixed bugs in the existing codebase, enhancing the overall functionality of the product.<br>
+                  • Integrated RESTful APIs to enable smooth communication between frontend and backend services.
+                </p>
+              </li>
+
+            </ol>
+
+          </section>
+
+          
+
+        </article>
+
+
+
+
+
+        <!--
+          - #PORTFOLIO
+        -->
+
+        <article class="portfolio" data-page="highlights">
+
+          <header>
+            <h2 class="h2 article-title">Projects & 
+              <br>Certifications</br></h2>
+          </header>
+
+          <!-- Hidden filter elements to keep JS happy -->
+          <ul class="filter-list" style="display:none;">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+          </ul>
+          <div class="filter-select-box" style="display:none;">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+            </ul>
+          </div>
+
+          <section class="projects">
+            <ul class="project-list" style="display: flex; flex-direction: column; gap: 24px;">
+              <li class="project-item active" data-filter-item data-category="web development" style="background: var(--eerie-black-2); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-1);">
+                <h3 class="project-title" style="margin-bottom: 6px; color: var(--orange-yellow-crayola);">Personal Portfolio</h3>
+                <p class="project-description" style="margin-bottom: 8px; color: var(--text-primary, #fff);">Made the personal website which is mobile and web friendly to show the information about me and Use Meta tags and Google Tag Manager for SEO and Analytics.</p>
+                <a href="https://sohamsarda.github.io/portfolio-website/ " target="_blank" style="color: var(--accent, #4e6e81); font-weight: 500;">View Project</a>
+              </li>
+              <li class="project-item active" data-filter-item data-category="web development" style="background: var(--eerie-black-2); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-1);">
+                <h3 class="project-title" style="margin-bottom: 6px; color: var(--orange-yellow-crayola);">Weather Dashboard</h3>
+                <p class="project-description" style="margin-bottom: 8px; color: var(--text-primary, #fff);">Provides real-time weather info using the OpenWeather API with city search.</p>
+                <a href="https://sohamsarda.github.io/weather-report/" target="_blank" style="color: var(--accent, #4e6e81); font-weight: 500;">View Project</a>
+              </li>
+              <li class="project-item active" data-filter-item data-category="web development" style="background: var(--eerie-black-2); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-1);">
+                <h3 class="project-title" style="margin-bottom: 6px; color: var(--orange-yellow-crayola);">Crowd Funding Website</h3>
+                <p class="project-description" style="margin-bottom: 8px; color: var(--text-primary, #fff);">A platform interface to request funding for ideas using a simple form UI.</p>
+                <a href="https://github.com/sohamsarda/crowdfundingwebsite" target="_blank" style="color: var(--accent, #4e6e81); font-weight: 500;">View Project</a>
+              </li>
+              <li class="project-item active" data-filter-item data-category="applications" style="background: var(--eerie-black-2); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-1);">
+                <h3 class="project-title" style="margin-bottom: 6px; color: var(--orange-yellow-crayola);">Chat Bot</h3>
+                <p class="project-description" style="margin-bottom: 8px; color: var(--text-primary, #fff);">A chat bot with API that sends messages to registered emails and users. Works as a customer query section.</p>
+                <a href="https://github.com/sohamsarda/chatbot-project-js-" target="_blank" style="color: var(--accent, #4e6e81); font-weight: 500;">View Project</a>
+              </li>
+              <li class="project-item active" data-filter-item data-category="applications" style="background: var(--eerie-black-2); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow-1);">
+                <h3 class="project-title" style="margin-bottom: 6px; color: var(--orange-yellow-crayola);">Web Bot</h3>
+                <p class="project-description" style="margin-bottom: 8px; color: var(--text-primary, #fff);">A smart reply bot that automates responses, developed for an internship company.</p>
+                <a href="https://github.com/sohamsarda/web-chatbot" target="_blank" style="color: var(--accent, #4e6e81); font-weight: 500;">View Project</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="certifications" style="margin-top: 36px;">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Certifications</h3>
+            </div>
+            <ul class="timeline-list">
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Build a Natural Programming Model</h4>
+                <span>Microsoft, Issued 2025</span>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Introduction to Cybersecurity</h4>
+                <span>Cisco, Issued 2023</span>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Data Analysis with Python</h4>
+                <span>NPTEL, Issued 2024</span>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Java Programming Masterclass</h4>
+                <span>Udemy, Issued 2024</span>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Full Stack Web Programming Masterclass</h4>
+                <span>Udemy, Issued 2024</span>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Introduction to Android Language with Java</h4>
+                <span>Udemy, Issued 2025</span>
+              </li>
+
+            </ul>
+          </section>
+
+        </article>
+
+
+
+
+
+        <!--
+          - #BLOG
+        -->
+
+        <article class="techstack" data-page="skills">
+
+          <header>
+            <h2 class="h2 article-title">Tech Stack & Skills</h2>
+          </header>
+
+          <section class="tech-stack-list" style="margin-top: 24px;">
+            <!-- Programming Languages -->
+            <h3 class="h3" style="margin-bottom: 12px;">Programming Languages</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: 28px 36px; margin-bottom: 28px; list-style: none; padding: 0;">
+              <!-- <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-java" style="font-size: 2.2rem; color: #e76f00;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Java</span>
+              </li> -->
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-python" style="font-size: 2.2rem; color: #3776ab;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Python</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-javascript" style="font-size: 2.2rem; color: #f7df1e;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">JavaScript</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="server-outline" style="font-size: 2.2rem; color: #336791;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">SQL</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-android" style="font-size: 2.2rem; color: #3ddc84;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Android</span>
+              </li>
+            </ul>
+            <hr style="border: none; border-top: 1px solid var(--jet, #22223b); margin: 18px 0 24px 0; width: 100%; opacity: 0.5;" />
+
+            <!-- Technologies -->
+            <h3 class="h3" style="margin-bottom: 12px;">Technologies</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: 28px 36px; margin-bottom: 28px; list-style: none; padding: 0;">
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-html5" style="font-size: 2.2rem; color: #e44d26;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">HTML5</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-css3" style="font-size: 2.2rem; color: #2965f1;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">CSS3</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-react" style="font-size: 2.2rem; color: #61dafb;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">React</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-nodejs" style="font-size: 2.2rem; color: #3c873a;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Node.js</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="leaf-outline" style="font-size: 2.2rem; color: #4db33d;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">MongoDB</span>
+              </li>
+            </ul>
+            <hr style="border: none; border-top: 1px solid var(--jet, #22223b); margin: 18px 0 24px 0; width: 100%; opacity: 0.5;" />
+
+            <!-- Tools & Platforms -->
+            <h3 class="h3" style="margin-bottom: 12px;">Tools & Platforms</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: 28px 36px; margin-bottom: 28px; list-style: none; padding: 0;">
+              <!-- <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-git-branch" style="font-size: 2.2rem; color: #f34f29;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Git</span>
+              </li> -->
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-github" style="font-size: 2.2rem; color: #fff;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">GitHub</span>
+              </li>
+              <!--   -->
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="code-slash-outline" style="font-size: 2.2rem; color: #0078d7;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">VS Code</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="logo-android" style="font-size: 2.2rem; color: #3ddc84;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Android Studio</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="flame-outline" style="font-size: 2.2rem; color: #ffca28;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Firebase</span>
+              </li>
+            </ul>
+            <hr style="border: none; border-top: 1px solid var(--jet, #22223b); margin: 18px 0 24px 0; width: 100%; opacity: 0.5;" />
+
+            <!-- Soft Skills -->
+            <h3 class="h3" style="margin-bottom: 12px;">Soft Skills</h3>
+            <ul style="display: flex; flex-wrap: wrap; gap: 28px 36px; margin-bottom: 0; list-style: none; padding: 0;">
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="chatbubble-ellipses-outline" style="font-size: 2.2rem; color: #ffd600;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Communication</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="bulb-outline" style="font-size: 2.2rem; color: #4e6e81;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Problem Solving</span>
+              </li>
+              <li style="display: flex; flex-direction: column; align-items: center; min-width: 80px;">
+                <ion-icon name="people-outline" style="font-size: 2.2rem; color: #61dafb;"></ion-icon>
+                <span style="margin-top: 6px; color: #fff;">Teamwork</span>
+              </li>
+            </ul>
+          </section>
+
+        </article>
+
+
+
+
+
+        <!--
+          - #CONTACT
+        -->
+
+        <article class="contact" data-page="contact">
+
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117977.65955533393!2d69.97189897794465!3d22.47407891943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3957154934c04597%3A0xe8b7dd81a49b75ca!2sJamnagar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1751538839153!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                
+              </iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form action="https://formsubmit.co/sohamsardajam@gmail.com" method="POST" class="form" data-form id="contactForm">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              </div>
+              <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+              <button class="form-btn" type="submit">
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+
+          </section>
+
+          <div id="thankYouPopup" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(34,34,59,0.85); z-index:9999; align-items:center; justify-content:center;">
+            <div style="background:#232136; color:#fff; padding:36px 48px; border-radius:16px; box-shadow:0 4px 32px 0 rgba(34,34,59,0.25); font-size:1.25rem; text-align:center;">
+              Thank you for reaching out!<br>Your message has been sent.
+              <br><br>
+              <button onclick="document.getElementById('thankYouPopup').style.display='none'" style="margin-top:18px; padding:8px 24px; background:var(--orange-yellow-crayola,#ffb742); color:#232136; border:none; border-radius:8px; font-weight:600; cursor:pointer;">Close</button>
+            </div>
+          </div>
+
+          <script>
+            document.getElementById('contactForm').onsubmit = function(e) {
+              e.preventDefault();
+              var form = this;
+              var data = new FormData(form);
+              fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              }).then(function(response) {
+                if (response.ok) {
+                  form.reset();
+                  document.getElementById('thankYouPopup').style.display = 'flex';
+                } else {
+                  alert('There was a problem sending your message. Please try again.');
+                }
+              }).catch(function() {
+                alert('There was a problem sending your message. Please try again.');
+              });
+            };
+          </script>
+
+        </article>
+
       </div>
-    </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="section-container">
-      <h2><i class="fas fa-laptop-code"></i> My Projects</h2>
-      <div class="project-grid">
-
-        <!-- Project 2 -->
-        <div class="project-card card">
-          <h3>Weather Dashboard</h3>
-          <p class="project-desc">Provides real-time weather info using the OpenWeather API with city search.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>OpenWeather API</span>
-            <span>HTML5</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sohamsarda/weather-report" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
-            <a href="https://sohamsarda.github.io/weather-report/" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Live
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card card">
-          <h3>Crowd Funding Website</h3>
-          <p class="project-desc">A platform interface to request funding for ideas using a simple form UI.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>Tailwind CSS</span>
-            <span>HTML</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sohamsarda/crowdfundingwebsite" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
-            <a href="https://github.com/sohamsarda/crowdfundingwebsite" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Live
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card card">
-          <h3>Chat Bot</h3>
-          <p class="project-desc">A chat bot with api that directly send the message to Email registered and to the the user.It can work as a customer query section.</p>
-          <div class="tech-stack">
-            <span>JavaScript</span>
-            <span>Html</span>
-            <span>Api Hosting</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/sohamsarda/chatbot-project-js-" target="_blank">
-              <i class="fab fa-github"></i> Code
-            </a>
-            <a href="https://github.com/sohamsarda/chatbot-project-js-" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Live
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card card">
-          <h3>Web Bot</h3>
-          <p class="project-desc">I developed a smart reply bot that automates responses, as part of my work for the internship company.</p>
-          <div class="tech-stack">
-            <span>Javascript</span>
-            <span>Render Api Hosting</span>
-          </div>
-          <div class="project-links">
-            <a href ="https://github.com/sohamsarda/web-chatbot" target="_blank">
-              <i class="fab fa-github"></i>Code 
-            </a>
-            <a href="https://web-chatbot-cmmc.onrender.com" target="_blank">
-              <i class="fas fa-external-link-alt"></i> Live
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="section-container">
-      <h2><i class="fas fa-tools"></i> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category card">
-          <h3><i class="fas fa-code"></i> Programming Languages</h3>
-          <div class="soft-skills-list">
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-java"></i></span>
-              <span class="soft-skill-name">Java</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 90%"></div></div>
-              <span class="soft-skill-percent">65%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-python"></i></span>
-              <span class="soft-skill-name">Python</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 85%"></div></div>
-              <span class="soft-skill-percent">55%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-js"></i></span>
-              <span class="soft-skill-name">JavaScript</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 80%"></div></div>
-              <span class="soft-skill-percent">75%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-database"></i></span>
-              <span class="soft-skill-name">SQL</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 75%"></div></div>
-              <span class="soft-skill-percent">75%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-android"></i></span>
-              <span class="soft-skill-name">Android</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 70%"></div></div>
-              <span class="soft-skill-percent">70%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category card">
-          <h3><i class="fas fa-laptop"></i> Technologies</h3>
-          <div class="soft-skills-list">
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-html5"></i></span>
-              <span class="soft-skill-name">HTML5</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 95%"></div></div>
-              <span class="soft-skill-percent">95%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-css3-alt"></i></span>
-              <span class="soft-skill-name">CSS3</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 90%"></div></div>
-              <span class="soft-skill-percent">90%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-react"></i></span>
-              <span class="soft-skill-name">React</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 80%"></div></div>
-              <span class="soft-skill-percent">60%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-node-js"></i></span>
-              <span class="soft-skill-name">Node.js</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 75%"></div></div>
-              <span class="soft-skill-percent">75%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-database"></i></span>
-              <span class="soft-skill-name">MongoDB</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 70%"></div></div>
-              <span class="soft-skill-percent">70%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category card">
-          <h3><i class="fas fa-wrench"></i> Tools & Platforms</h3>
-          <div class="soft-skills-list">
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-git-alt"></i></span>
-              <span class="soft-skill-name">Git</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 90%"></div></div>
-              <span class="soft-skill-percent">80%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-github"></i></span>
-              <span class="soft-skill-name">GitHub</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 90%"></div></div>
-              <span class="soft-skill-percent">90%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-aws"></i></span>
-              <span class="soft-skill-name">AWS</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 70%"></div></div>
-              <span class="soft-skill-percent">40%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-code"></i></span>
-              <span class="soft-skill-name">VS Code</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 95%"></div></div>
-              <span class="soft-skill-percent">95%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fab fa-android"></i></span>
-              <span class="soft-skill-name">Android Studio</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 85%"></div></div>
-              <span class="soft-skill-percent">85%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-fire"></i></span>
-              <span class="soft-skill-name">Firebase</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 75%"></div></div>
-              <span class="soft-skill-percent">65%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category card">
-          <h3><i class="fas fa-user-friends"></i> Soft Skills</h3>
-          <div class="soft-skills-list">
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-comments"></i></span>
-              <span class="soft-skill-name">Communication</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 90%"></div></div>
-              <span class="soft-skill-percent">90%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-lightbulb"></i></span>
-              <span class="soft-skill-name">Problem Solving</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 85%"></div></div>
-              <span class="soft-skill-percent">75%</span>
-            </div>
-            <div class="soft-skill">
-              <span class="soft-skill-icon"><i class="fas fa-users"></i></span>
-              <span class="soft-skill-name">Teamwork</span>
-              <div class="soft-skill-bar"><div class="soft-skill-bar-fill" style="width: 95%"></div></div>
-              <span class="soft-skill-percent">85%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="certifications">
-    <div class="section-container">
-      <h2><i class="fas fa-certificate"></i> Certifications</h2>
-      <div class="cert-grid">
 
 
-        <!-- Microsoft Natural Programming -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Build a Natural Programming Model</h3>
-            <p class="cert-issuer">Microsoft</p>
-            <p class="cert-date">Issued 2025</p>
-          </div>
-        </div>
-
-        <!-- Cisco Cybersecurity -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Introduction to Cybersecurity</h3>
-            <p class="cert-issuer">Cisco</p>
-            <p class="cert-date">Issued 2023</p>
-          </div>
-        </div>
-
-        <!-- NPTEL Python -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Data Analysis with Python</h3>
-            <p class="cert-issuer">NPTEL</p>
-            <p class="cert-date">Issued 2024</p>
-          </div>
-        </div>
-
-        <!-- Udemy Java -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Java Programming Masterclass</h3>
-            <p class="cert-issuer">Udemy</p>
-            <p class="cert-date">Issued 2024</p>
-          </div>
-        </div>
-
-        <!-- Udemy web -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Full Stack Web Programming Masterclass</h3>
-            <p class="cert-issuer">Udemy</p>
-            <p class="cert-date">Issued 2024</p>
-          </div>
-        </div>
-
-        <!-- Android  -->
-        <div class="cert-card card">
-          <div class="cert-icon">
-            <i class="fa-brands fa-android"></i>
-          </div>
-          <div class="cert-content">
-            <h3>Introduction to Android Language with Java</h3>
-            <p class="cert-issuer">Udemy</p>
-            <p class="cert-date">Isuued 2025</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="section-container">
-      <h2>Get in Touch</h2>
-      <div class="contact-container card">
-        <form
-          id="contact-form"
-          class="contact-form"
-          action="https://formsubmit.co/sohamsardajam@gmail.com"
-          method="POST">
-          <div class="form-group">
-            <input type="text" name="name" required placeholder="Your Name" />
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" required placeholder="Your Email" />
-          </div>
-          <div class="form-group">
-            <textarea name="message" required placeholder="Your Message"></textarea>
-          </div>
-          <input type="hidden" name="_next" value="https://sohamsarda.github.io/portfolio-website/thank-you.html" />
-          <button type="submit" class="btn primary-btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section> 
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Soham Sarda.</p>
-  </footer>
 
 
-  <script src="script.js"></script>
-  <script>
-    // Dark mode functionality
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-    const icon = darkModeToggle.querySelector('i');
+      <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      body.setAttribute('data-theme', 'dark');
-      icon.classList.replace('fa-moon', 'fa-sun');
-    }
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    darkModeToggle.addEventListener('click', () => {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.setAttribute('data-theme', 'dark');
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  </script>
+  </div>
+
 </body>
+
 </html>
