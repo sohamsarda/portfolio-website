@@ -1,3 +1,11 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+
+
+
+
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -2562,6 +2570,16 @@ img:hover, .project-img:hover, .blog-banner-box img:hover {
   .profile-btn {
     min-height: 44px;
   }
+  
+  /* Add bottom padding to contact form to prevent navbar overlap */
+  .contact-form {
+    margin-bottom: 80px;
+  }
+  
+  /* Ensure main content has enough bottom margin */
+  main {
+    margin-bottom: 120px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2579,4 +2597,55 @@ img:hover, .project-img:hover, .blog-banner-box img:hover {
     padding: 10px 12px;
     border-radius: 6px;
   }
+  
+  /* Add bottom padding to contact form to prevent navbar overlap */
+  .contact-form {
+    margin-bottom: 90px;
+  }
+  
+  /* Ensure main content has enough bottom margin */
+  main {
+    margin-bottom: 130px;
+  }
+}
+
+/* Project Section Improvements */
+
+/* 4. Make badges wrap on mobile */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 0;
+}
+.project-tech strong {
+  margin-right: 6px;
+}
+.project-tech span {
+  margin-bottom: 4px;
+}
+
+/* 5. Equal vertical spacing between project cards and badges */
+.project-list {
+  gap: 32px !important;
+}
+.project-item {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* 7. Left accent bar for project cards */
+.project-item {
+  border-left: 5px solid var(--accent, hsl(45, 100%, 72%));
+  padding-left: 15px !important;
+}
+
+/* 10. Accent color for interactive elements and hover states */
+.project-item a {
+  color: #fff;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+.project-item a:hover {
+  color: var(--accent, hsl(45, 100%, 72%));
+  text-decoration: underline;
 }
